@@ -48,8 +48,5 @@
 	--Create seed data: Using task to implement Asynchronous Programming i.e. executing operations asynchronously 
 	--use the other watch run version:
 		dotnet watch --no-hot-reload //work 99% of the cases
-	--Create a basic Controller
 	
-6. Create a basic React Application
-
 												
