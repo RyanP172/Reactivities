@@ -51,5 +51,40 @@
 	--Create a basic Controller
 	
 6. Create a basic React Application
-
+	--npx create-react-app client-app --use-npm --template typescript
+	React use the concept of virtual DOM
+	--React Hook to build a function application: Hook in react is functions that allows we hook into React state and LifeCycle fearture from function component. Function
+	component is literaly a function that return JSX
+		--useState(): assign and track state of a component
+		--useEffect(): this allow we hook into a life cycle event inside our component. When our component mount or initialize on our page, we can use this hook to add a
+		side effect when something happen when our component mount, or take an action when our component unmount
+		--useWhateverWeWant()
+	--Typescript adv: strong typing = IDE will get error before combining code; Object oriented; better intellisense; Access modifiers (use public or private in class or function)
+					and it will be removed when the code complied to JS; Future JS Features; Catch silly mistakes in dev = save tons of time; 3rd party lib are vast
+					Easy to learn if you know JS; much improved in React
+	--Typescript pros: More upfront code; 3rd party libraries don't support typescript; strict mode is strict
+	
+	--Don't use conventional naming in Interface: Don't use I...
+	--Child component of the App component: Using Props to pass property into a child component:         
+		{ducks.map(duck => (
+          <DuckItem duck={duck} key={duck.name}/>
+        ))}
+		
+	--install react developer tools
+	--fetch data by using axios: Main reason to use is it allows to intercept request and response
+		--npm install axios
+		--create a variable : const
+		--Call Back function (() =>)
+		--when using useEffect, it is important to give it dependency, otherwise it will be fired up:
+			    axios.get('http://localhost:5116/api/activities')
+					.then(response => {
+					  setActivities(response.data);
+					})
+				This function will loop forever
+	--Different domain fixed by enable CORS
+	--Install CSS Framework: Semantic UI 
+		https://react.semantic-ui.com/
+		import the css framework into index.tsx
+	--install extension: Auto Rename Tag
+					
 												
