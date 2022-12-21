@@ -1,3 +1,6 @@
+using Application.Activities;
+using Application.Core;
+using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Persistence;
 using System.Linq;
@@ -27,7 +30,10 @@ builder.Services.AddCors(opt =>
                 });
 });
 
+builder.Services.AddMediatR(typeof(List.Handler).Assembly);// when the application start, service will look for Add mediator at the location of 
+                                                // List.Handler
 
+builder.Services.AddAutoMapper(typeof(MappingProfiles).Assembly);
 
 var app = builder.Build();
 

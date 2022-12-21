@@ -86,5 +86,13 @@
 		https://react.semantic-ui.com/
 		import the css framework into index.tsx
 	--install extension: Auto Rename Tag
-					
+	
+7. Create CRUD application using CQRS + Mediator pattern
+	--Clean architecture
+	--CQRS: Command Query Responsibility Segalation: Separate Command vs Query
+		--Command: Does st, Modifies State, Should not return a value
+		--Query: Answers a question, Does not modify State, and Should return a value
+	--CQRS Read/Write Database can reduce the join table. Read database can be noSql such as mongoDB
+	7.1. Query Handler
+		
 												

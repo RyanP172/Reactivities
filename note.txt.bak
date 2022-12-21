@@ -69,5 +69,22 @@
 		{ducks.map(duck => (
           <DuckItem duck={duck} key={duck.name}/>
         ))}
+		
+	--install react developer tools
+	--fetch data by using axios: Main reason to use is it allows to intercept request and response
+		--npm install axios
+		--create a variable : const
+		--Call Back function (() =>)
+		--when using useEffect, it is important to give it dependency, otherwise it will be fired up:
+			    axios.get('http://localhost:5116/api/activities')
+					.then(response => {
+					  setActivities(response.data);
+					})
+				This function will loop forever
+	--Different domain fixed by enable CORS
+	--Install CSS Framework: Semantic UI 
+		https://react.semantic-ui.com/
+		import the css framework into index.tsx
+	--install extension: Auto Rename Tag
 					
 												
