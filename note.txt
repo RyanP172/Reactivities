@@ -93,6 +93,73 @@
 		--Command: Does st, Modifies State, Should not return a value
 		--Query: Answers a question, Does not modify State, and Should return a value
 	--CQRS Read/Write Database can reduce the join table. Read database can be noSql such as mongoDB
+	--Add MediatR to our project’s DI container and pass the assembly that would contain the commands, queries, and handlers that we will write subsequently to work with our data. 
 	7.1. Query Handler
+	7.2. Auto mapper to map property of an object
+	7.3 Cancellation token
+8. Create CRUD client app
+	-- Add Activity Interface to have a type safety in application
+	-- Add Nav bar
+	-- Add Style <Container style={{marginTop: '7em'}}>
+	-- React doesn't allow to return >=2 component at the same level. Only return one component, and we can have as many child of that component as we want
+	-- Create Dashboard to display activities: Using props to destructure the property that we passing down to a child component
+		export default function ActivityDashboard({activities}: Props) {
+		return (
+			<Grid>
+				<Grid.Column width='10'>
+					<List>
+						{activities.map(activity => (
+							<List.Item key={activity.id}>
+								{activity.title}
+							</List.Item>
+						))}
+					</List>
+				</Grid.Column>
+			</Grid>
+		)
+
+
+	in our parrent component:
+	<Fragment>
+      <NavBar />
+      <Container style={{ marginTop: '7em' }}>
+        <ActivityDashboard activities={activities}/>
+      </Container>
+    </Fragment>
+	-- Create Activity List -> Child component of Activity Dashboard
+	--Segment will stand out some activities from the page; divided = Horizon alignment between activities
+	--Ctr+Shift+P, open keyboard shortcut reference. check for copy Line Up/Down (=Shift+Alt+Up/Down)
+	--{activities[0] &&
+                <ActivityDetails activity={activities[0]}/>}  -->> This line of code is mean that if the left of && is not null, then excecute the right of &&
+	--add logic to select an activity: focus on passing props to a child component
+	--display Create/edit form
+	--use state and onChange event
+	--Handle Create/Edit Submission
+	--Create GUID in client side:
+		--install package: npm install uuid
+	--Delete Activity
+	
+	=> finish section by having CRUD functions worked locally
+	
+
+
+
+
+
+
+
+
+
+12. Indentity
+	--ASP.Net Core Idendity: Membership system, supported login stored in Identity, supports external providers, Comes with default user stores, UserManager, SignInManager
+		--store user hash password in databased. Password hashing is one way operation => Hash but cannot dehash
+		password string + hash + salt => not identical even the password is the same
+	--JWT Token Authentication
+	--Authenticated request
+	12.1. Create entity in Domain proj: AppUser
+	12.2. Update DBContext: change inherited from IdentityDbContext<AppUser>
+			dotnet ef migrations add IdentityAdded -p Persistence -s API
+	12.3 Config ASP.net Identity in program.cs
+	
 		
 												
