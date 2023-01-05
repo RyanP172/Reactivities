@@ -140,6 +140,8 @@
 	--Delete Activity
 	
 	=> finish section by having CRUD functions worked locally
+
+9. Section 7: MObx: State centralize system
 	
 
 
